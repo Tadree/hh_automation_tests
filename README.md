@@ -65,7 +65,7 @@ gradle clean ${TEST_SUITE}
 - <code>REMOTE_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты
 - <code>VIDEO_STORAGE</code> - адрес удаленного сервера, по которому можно получить видео
 
-### <img alt="Allure" height="20" src="images/logos/Jenkins.svg" width="20" align="center"> Сборка в [Jenkins](https://jenkins.autotests.cloud/job/20-Tadree-hh.ru/)
+### <img alt="Jenkins" height="20" src="images/logos/Jenkins.svg" width="20" align="center"> Сборка в [Jenkins](https://jenkins.autotests.cloud/job/20-Tadree-hh.ru/)
 <p align="center">
 <img title="Jenkins Build" src="images/screens/Jenkins.png">
 </p>
@@ -73,36 +73,36 @@ gradle clean ${TEST_SUITE}
 ### <img alt="Allure" height="20" src="images/logos/Allure_Report.svg" width="20" align="center"> Отчет в Allure report
 #### Основная страница отчета
 <p align="center">
-<img title="Jenkins Build" src="images/screens/Allure-report.png">
+<img title="Allure report" src="images/screens/Allure-report.png">
 </p>
 
 #### Тест-кейсы
 <p align="center">
-<img title="Jenkins Build" src="images/screens/Allure-tests.png">
+<img title="Allure tests" src="images/screens/Allure-tests.png">
 </p>
 
-### <img alt="Allure" height="20" src="images/logos/Allure_TO.svg" width="20" align="center"> Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/3515/dashboards)
+### <img alt="Allure TestOps" height="20" src="images/logos/Allure_TO.svg" width="20" align="center"> Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/3515/dashboards)
 #### Dashboard
 <p align="center">
-<img title="Jenkins Build" src="images/screens/Allure-TestOps-dashboard.png">
+<img title="Allure TestOps Dashboard" src="images/screens/Allure-TestOps-dashboard.png">
 </p>
 
 #### Тест-кейсы
 <p align="center">
-<img title="Jenkins Build" src="images/screens/Allure-TestOps-tests.png">
+<img title="Allure TestOps tests" src="images/screens/Allure-TestOps-tests.png">
 </p>
 
-### <img alt="Allure" height="20" src="images/logos/Jira.svg" width="20" align="center"> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-787)
+### <img alt="Jira" height="20" src="images/logos/Jira.svg" width="20" align="center"> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-787)
 <p align="center">
-<img title="Jenkins Build" src="images/screens/Jira.png">
+<img title="Jira" src="images/screens/Jira.png">
 </p>
 
-### <img alt="Allure" height="20" src="images/logos/Telegram.svg" width="20" align="center"> Уведомления в Telegram с использованием бота
+### <img alt="Telegram" height="20" src="images/logos/Telegram.svg" width="20" align="center"> Уведомления в Telegram с использованием бота
 <p align="center">
-<img title="Jenkins Build" src="images/screens/tg.png">
+<img title="Telegram" src="images/screens/tg.png">
 </p>
 
-### <img alt="Allure" height="20" src="images/logos/Selenoid.svg" width="20" align="center"> Пример видео выполнения теста на Selenoid
+### <img alt="Selenoid" height="20" src="images/logos/Selenoid.svg" width="20" align="center"> Пример видео выполнения теста на Selenoid
 <p align="center">
   <img title="Selenoid Video" src="images/screens/video.gif">
 </p>
