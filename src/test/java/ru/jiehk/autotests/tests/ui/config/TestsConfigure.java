@@ -24,7 +24,7 @@ public class TestsConfigure {
         ));
 
         Configuration.browserCapabilities = capabilities;
-        Configuration.pageLoadStrategy = "eager";
+//        Configuration.pageLoadStrategy = "eager";
 
         ChromeOptions chromeOptions = new ChromeOptions();
 
