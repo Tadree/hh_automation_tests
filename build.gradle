@@ -8,15 +8,16 @@ repositories {
     mavenCentral()
 }
 
-def restAssuredVersion = "5.3.1",
+def restAssuredVersion = "5.3.0",
     allureVersion = "2.21.0",
     assertJVersion = "3.24.2",
     slf4jVersion = "2.0.7",
     ownerVersion = "1.0.12",
     jacksonVersion = "2.15.1",
     javafakerVersion = "1.0.2",
-    selenideVersion = "6.17.2",
-    junitVersion = "5.9.3"
+    selenideVersion = "6.13.0",
+    junitVersion = "5.9.3",
+    appiumVersion = "8.3.0"
 
 allure {
     report {
@@ -44,7 +45,9 @@ dependencies {
             "io.qameta.allure:allure-rest-assured:$allureVersion",
             "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion",
             "org.assertj:assertj-core:$assertJVersion",
-            "org.slf4j:slf4j-simple:$slf4jVersion"
+            "org.slf4j:slf4j-simple:$slf4jVersion",
+            "io.appium:java-client:$appiumVersion"
+//            "commons-io:commons-io:2.11.0"
     )
 }
 
@@ -74,4 +77,17 @@ task api_tests(type: Test) {
     useJUnitPlatform {
         includeTags("api")
     }
+}
+
+task android_tests(type: Test) {
+    useJUnitPlatform{
+        includeTags("android")
+    }
+}
+
+compileJava {
+    options.encoding = 'UTF-8'
+}
+compileTestJava {
+    options.encoding = 'UTF-8'
 }
