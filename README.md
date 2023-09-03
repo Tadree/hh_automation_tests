@@ -49,7 +49,7 @@ gradle clean test -Denv=remote
 #### Удаленный запуск тестов с передачей параметров:
 
 ```bash
-gradle clean test 
+gradle clean ${TEST_SUITE} 
 -Dbrowser=${BROWSER}
 -DbrowserVersion=${BROWSER_VERSION}
 -DbrowserSize=${BROWSER_SIZE}
@@ -58,11 +58,12 @@ gradle clean test
 ```
 где: 
 
-- <code>BROWSER</code> – браузер, в котором будут выполняться тесты.
-- <code>BROWSER_VERSION</code> – версия браузера, в которой будут выполняться тесты.
-- <code>BROWSER_SIZE</code> – размер окна браузера, в котором будут выполняться тесты.
-- <code>REMOTE_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
-- <code>VIDEO_STORAGE</code> - адрес удаленного сервера, по которому можно получить видео.
+- <code>TEST_SUITE</code> – ттесттовый набор (UI тесты, API тесты)
+- <code>BROWSER</code> – браузер, в котором будут выполняться тесты
+- <code>BROWSER_VERSION</code> – версия браузера, в которой будут выполняться тесты
+- <code>BROWSER_SIZE</code> – размер окна браузера, в котором будут выполняться тесты
+- <code>REMOTE_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты
+- <code>VIDEO_STORAGE</code> - адрес удаленного сервера, по которому можно получить видео
 
 ### Сборка в [Jenkins](https://jenkins.autotests.cloud/job/20-Tadree-hh.ru/)
 <p align="center">

@@ -12,7 +12,7 @@ public interface TestsConfig extends Config {
     String getBrowser();
 
     @Key("baseUrl")
-    @DefaultValue("https://demoqa.com")
+    @DefaultValue("https://hh.ru")
     String getBaseUrl();
 
     @Key("browserSize")
