@@ -27,14 +27,14 @@ public class MainPage {
         return this;
     }
 
-    @Step("Проверяем отображение строки поиска")
+    @Step("Проверка отображения строки поиска")
 
     public MainPage searchBarDisplayingCheck() {
         searchBar.shouldBe(Condition.visible);
         return this;
     }
 
-    @Step("Проверяем плейсхолдер строки поиска")
+    @Step("Проверка плейсхолдера строки поиска")
     public MainPage searchBarPlaceHolderCheck(String expectedPlaceholder) {
         String actualPlaceholder = searchBar.getAttribute("placeholder");
         assertThat(actualPlaceholder).isEqualTo(expectedPlaceholder);

@@ -13,7 +13,7 @@ public class SearchResultsPage {
             vacancyResults = $("[data-qa=vacancy-serp__results]");
 
 
-    @Step("Проверяем открытие страницы результатов поиска")
+    @Step("Проверка открытия страницы результатов поиска")
     public SearchResultsPage openSearchResultsPageCheck(String searchRequest) {
         vacanciesSearchHeader.shouldHave(text(("«" + searchRequest + "»")));
         vacancyResults.shouldBe(visible);

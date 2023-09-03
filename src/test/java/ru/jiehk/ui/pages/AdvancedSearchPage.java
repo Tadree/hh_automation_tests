@@ -39,13 +39,13 @@ public class AdvancedSearchPage {
         return this;
     }
 
-    @Step("Проверяем подстановку подсказки в поле \"Ключевые слова\"")
+    @Step("Проверка подстановки подсказки в поле \"Ключевые слова\"")
     public AdvancedSearchPage keywordsInputSuggestCheck() {
         keywordsInput.shouldHave(value(keywordsInputSuggest.text()));
         return this;
     }
 
-    @Step("Проверяем открытие страницы расширенного поиска")
+    @Step("Проверка открытия страницы расширенного поиска")
     public AdvancedSearchPage openAdvancedSearchPageCheck(String advancedSearchExpectedTitle) {
         title.shouldHave(text(advancedSearchExpectedTitle));
         return this;
