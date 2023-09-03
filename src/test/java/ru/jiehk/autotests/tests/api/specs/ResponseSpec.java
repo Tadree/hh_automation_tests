@@ -1,4 +1,4 @@
-package ru.jiehk.autotests.tests.api.helpers.specs;
+package ru.jiehk.autotests.tests.api.specs;
 
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.specification.ResponseSpecification;

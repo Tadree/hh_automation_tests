@@ -1,5 +1,6 @@
 package ru.jiehk.autotests.tests.api.tests;
 
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -11,15 +12,15 @@ import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static ru.jiehk.autotests.tests.api.helpers.specs.ResponseSpec.successResponseSpec;
-import static ru.jiehk.autotests.tests.api.helpers.specs.RequestSpec.requestSpec;
+import static ru.jiehk.autotests.tests.api.specs.ResponseSpec.successResponseSpec;
+import static ru.jiehk.autotests.tests.api.specs.RequestSpec.requestSpec;
 
-
+@Owner("Elena Kosiakova")
+@Tag("api")
 public class EmployersSearchTests extends TestBase {
 
     @ParameterizedTest(name = "Поиск работодателя с наименование {0}")
     @ValueSource(strings = {"впрок", "headhunter"})
-    @Tag("api")
     @DisplayName("Проверка поиска работодателя по наименованию")
     void employersSearchTest(String searchQuery) {
         EmployersSearchResponse response = step("Выполнение запроса на поиск работодателя", () ->
@@ -37,8 +38,7 @@ public class EmployersSearchTests extends TestBase {
     }
 
     @Test
-    @Tag("api")
-    @DisplayName("Проверка пагинации в запросе на поиск работодателя")
+    @DisplayName("Проверка пагинации при поиске работодателя")
     void employersSearchPaginationTest() {
         EmployersSearchResponse response = step("Выполнение запроса на поиск работодателя", () ->
                 given()

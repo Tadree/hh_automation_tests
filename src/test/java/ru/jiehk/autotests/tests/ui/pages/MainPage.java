@@ -18,7 +18,8 @@ public class MainPage {
             advancedSearchButton = $("[data-qa=advanced-search]"),
             searchSuggests = $(".suggest"),
             regionPopup = $("[data-qa=region-clarification]"),
-            searchBarTitle = $("[data-qa=bloko-header-3]");
+            title = $("[data-qa=bloko-header-3]"),
+            localeSwitcher = $("[data-qa=change-locale-EN]");
 
     @Step("Открываем главную страницу")
     public MainPage openMainPage() {
@@ -72,17 +73,24 @@ public class MainPage {
         return this;
     }
 
-    @Step("Проверка заголовка строки поиска")
-    public MainPage searchBarTitleCheck(String expectedTitle) {
-        searchBarTitle.shouldHave(text(expectedTitle));
+    @Step("Проверка заголовка строки поиска на главной странице")
+    public MainPage titleCheck(String expectedTitle) {
+        title.shouldHave(text(expectedTitle));
         return this;
     }
 
-    @Step("Проверка отсутствия ошибок в консоле")
+    @Step("Проверка отсутствия ошибок в консоле на главной странице")
     public MainPage consoleErrorsCheck() {
         String consoleLogs = Attach.getConsoleLogs();
         String errorText = "SEVERE";
         assertThat(consoleLogs).doesNotContain(errorText);
+        return this;
+    }
+
+    @Step("Переключаем язык")
+    public MainPage changeLocale() {
+        localeSwitcher.scrollTo();
+        localeSwitcher.click();
         return this;
     }
 }
