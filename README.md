@@ -114,5 +114,5 @@ gradle clean ${TEST_SUITE}
 
 ### <img alt="Selenoid" height="20" src="images/logos/Browserstack.svg" width="20" align="center"> Пример видео выполнения теста в Browserstack
 <p align="center">
-  <img title="Browserstack Video" src="images/screens/mobile_test.gif">
+  <img title="Browserstack Video" src="images/screens/mobile_test.gif" width=60%>
 </p>
