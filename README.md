@@ -65,12 +65,12 @@ gradle clean ${TEST_SUITE}
 - <code>REMOTE_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты
 - <code>VIDEO_STORAGE</code> - адрес удаленного сервера, по которому можно получить видео
 
-### Сборка в [Jenkins](https://jenkins.autotests.cloud/job/20-Tadree-hh.ru/)
+### <img alt="Allure" height="20" src="images/logos/Jenkins.svg" width="20" align="center"> Сборка в [Jenkins](https://jenkins.autotests.cloud/job/20-Tadree-hh.ru/)
 <p align="center">
 <img title="Jenkins Build" src="images/screens/Jenkins.png">
 </p>
 
-### Отчет в Allure report
+### <img alt="Allure" height="20" src="images/logos/Allure_Report.svg" width="20" align="center"> Отчет в Allure report
 #### Основная страница отчета
 <p align="center">
 <img title="Jenkins Build" src="images/screens/Allure-report.png">
@@ -81,7 +81,7 @@ gradle clean ${TEST_SUITE}
 <img title="Jenkins Build" src="images/screens/Allure-tests.png">
 </p>
 
-### Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/3515/dashboards)
+### <img alt="Allure" height="20" src="images/logos/Allure_TO.svg" width="20" align="center"> Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/3515/dashboards)
 #### Dashboard
 <p align="center">
 <img title="Jenkins Build" src="images/screens/Allure-TestOps-dashboard.png">
@@ -92,17 +92,17 @@ gradle clean ${TEST_SUITE}
 <img title="Jenkins Build" src="images/screens/Allure-TestOps-tests.png">
 </p>
 
-### Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-787)
+### <img alt="Allure" height="20" src="images/logos/Jira.svg" width="20" align="center"> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-787)
 <p align="center">
 <img title="Jenkins Build" src="images/screens/Jira.png">
 </p>
 
-### Уведомления в Telegram с использованием бота
+### <img alt="Allure" height="20" src="images/logos/Telegram.svg" width="20" align="center"> Уведомления в Telegram с использованием бота
 <p align="center">
 <img title="Jenkins Build" src="images/screens/tg.png">
 </p>
 
-### Пример видео выполнения теста на Selenoid
+### <img alt="Allure" height="20" src="images/logos/Selenoid.svg" width="20" align="center"> Пример видео выполнения теста на Selenoid
 <p align="center">
   <img title="Selenoid Video" src="images/screens/video.gif">
 </p>
