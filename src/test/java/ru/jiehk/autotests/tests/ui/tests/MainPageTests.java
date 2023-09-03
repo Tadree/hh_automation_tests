@@ -25,57 +25,80 @@ public class MainPageTests extends TestBase {
     @Test
     @DisplayName("Отображение строки поиска на главной странице")
     void searchBarTest() {
-        mainPage.openMainPage().searchBarDisplayingCheck();
+        mainPage
+                .openMainPage()
+                .searchBarDisplayingCheck();
     }
 
     @Test
     @DisplayName("Проверка плейсхолдера строки поиска на главной странице")
     void searchBarPlaceholderTest() {
-        mainPage.openMainPage().searchBarPlaceHolderCheck(SEARCHPLACEHOLDER);
+        mainPage
+                .openMainPage()
+                .searchBarPlaceHolderCheck(SEARCHPLACEHOLDER);
     }
 
     @Test
     @DisplayName("Переход на страницу результатов поиска при выполнении поиска с главной страницы")
     void searchTest() {
-        mainPage.openMainPage().searchBarSetValue(SEARCHREQUEST).searchButtonClick();
-        searchResultsPage.openSearchResultsPageCheck(SEARCHREQUEST);
+        mainPage
+                .openMainPage()
+                .searchBarSetValue(SEARCHREQUEST)
+                .searchButtonClick();
+        searchResultsPage.
+                openSearchResultsPageCheck(SEARCHREQUEST);
     }
 
     @Test
     @DisplayName("Переход на страницу расширенного поиска с главной страницы")
     void advancedSearchTest() {
-        mainPage.openMainPage().advancedSearchButtonClick();
-        advancedSearchPage.openAdvancedSearchPageCheck(ADVANCEDSEARCHPAGETITLE);
+        mainPage
+                .openMainPage()
+                .advancedSearchButtonClick();
+        advancedSearchPage.
+                openAdvancedSearchPageCheck(ADVANCEDSEARCHPAGETITLE);
     }
 
     @Test
     @DisplayName("Отображение поисковых подсказок на главной странице")
     void suggestsTest() {
-        mainPage.openMainPage().searchBarSetValue(SEARCHREQUEST).searchSuggestsCheck(SEARCHREQUEST);
+        mainPage
+                .openMainPage()
+                .searchBarSetValue(SEARCHREQUEST)
+                .searchSuggestsCheck(SEARCHREQUEST);
     }
 
     @Test
     @DisplayName("Проверка заголовка на главной странице")
     void searchBarTitleTest() {
-        mainPage.openMainPage().titleCheck(SEARCHTITLE);
+        mainPage
+                .openMainPage()
+                .titleCheck(SEARCHTITLE);
     }
 
     @Test
     @DisplayName("Отображение popup подтверждения региона на главной странице")
     void regionPopupTest() {
-        mainPage.openMainPage().regionPopupCheck();
+        mainPage
+                .openMainPage()
+                .regionPopupCheck();
     }
 
     @Test
     @DisplayName("Проверка смены языка на английский")
     public void languageSwitcherTest() {
-        mainPage.openMainPage().changeLocale().searchBarPlaceHolderCheck(SEARCHPLACEHOLDEREN);
+        mainPage
+                .openMainPage()
+                .changeLocale()
+                .searchBarPlaceHolderCheck(SEARCHPLACEHOLDEREN);
     }
 
     @Test
     @Disabled
     @DisplayName("Отсутствие ошибок в логах консоли")
     void consoleShouldNotHaveErrorsTest() {
-        mainPage.openMainPage().consoleErrorsCheck();
+        mainPage
+                .openMainPage()
+                .consoleErrorsCheck();
     }
 }
