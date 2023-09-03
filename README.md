@@ -99,7 +99,7 @@ gradle clean ${TEST_SUITE}
 
 ### <img alt="Telegram" height="20" src="images/logos/Telegram.svg" width="20" align="center"> Уведомления в Telegram с использованием бота
 <p align="center">
-<img title="Telegram" src="images/screens/tg.png">
+<img title="Telegram" src="images/screens/tg.png" width=40%>
 </p>
 
 ### <img alt="Selenoid" height="20" src="images/logos/Selenoid.svg" width="20" align="center"> Пример видео выполнения теста на Selenoid
