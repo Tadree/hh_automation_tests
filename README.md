@@ -63,14 +63,16 @@ gradle clean ui_tests
 -Dbrowser=${BROWSER}
 -DbrowserVersion=${BROWSER_VERSION}
 -DbrowserSize=${BROWSER_SIZE}
--DremoteDriverUrl=https://user1:1234@${REMOTE_DRIVER_URL}/wd/hub/
+-DremoteDriverUrl=https://{REMOTE_DRIVER_LOGIN}:{REMOTE_DRIVER_PASSWORD}@${REMOTE_DRIVER_URL}/wd/hub/
 -DvideoStorage=https://${VIDEO_STORAGE}/video/
 ```
 где:
 - <code>BROWSER</code> – браузер, в котором будут выполняться тесты
 - <code>BROWSER_VERSION</code> – версия браузера, в которой будут выполняться тесты
 - <code>BROWSER_SIZE</code> – размер окна браузера, в котором будут выполняться тесты
-- <code>REMOTE_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты
+- <code>REMOTE_DRIVER_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты
+- <code>REMOTE_DRIVER_LOGIN</code> – логин удаленного сервера, на котором будут запускаться тесты
+- <code>REMOTE_DRIVER_PASSWORD</code> – пароль удаленного сервера, на котором будут запускаться тесты
 - <code>VIDEO_STORAGE</code> - адрес удаленного сервера, по которому можно получить видео
 
 ##### Для android тестов
