@@ -9,6 +9,7 @@ import java.util.ArrayList;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PhoneConfirmErrorResponse {
+
     @JsonProperty("request_id")
     private String requestId;
     private ArrayList<ErrorData> errors = new ArrayList<>();

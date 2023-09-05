@@ -9,8 +9,10 @@ import ru.jiehk.mobile.pages.MainPage;
 @Owner("Elena Kosiakova")
 @Tag("android")
 public class MainPageTests extends TestBase {
+
     public static final String TITLE = "Вакансии для вас";
     public static final String SEARCHREQUEST = "qa";
+
     MainPage mainPage = new MainPage();
 
     @Test

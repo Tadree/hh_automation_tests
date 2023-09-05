@@ -4,6 +4,7 @@ import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import ru.jiehk.api.data.TestData;
 import ru.jiehk.api.models.PhoneConfirmErrorResponse;
 import ru.jiehk.api.models.VacancySearchResponse;
 
@@ -14,11 +15,11 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static ru.jiehk.api.specs.RequestSpec.requestSpec;
 import static ru.jiehk.api.specs.ResponseSpec.*;
 
+@Tag("api")
 @Owner("Elena Kosiakova")
 public class FavoriteVacanciesTests extends TestBase {
 
     @Test
-    @Tag("api")
     @DisplayName("Проверка ошибки авторизации при добавлении вакансии в избранное")
     void AddVacancyToFavoriteWithoutAuthorizationTest() {
         TestData testData = new TestData();

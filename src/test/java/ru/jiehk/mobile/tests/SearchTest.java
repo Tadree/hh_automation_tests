@@ -12,6 +12,7 @@ import ru.jiehk.mobile.pages.SearchResultsPage;
 public class SearchTest extends TestBase {
 
     public static final String SEARCHREQUEST = "qa";
+
     MainPage mainPage = new MainPage();
     SearchResultsPage searchResultsPage = new SearchResultsPage();
 

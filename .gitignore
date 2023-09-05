@@ -41,3 +41,4 @@ target/
 .vscode
 /gradlew
 /gradlew.bat
+settings.gradle

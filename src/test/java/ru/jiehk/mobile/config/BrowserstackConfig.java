@@ -1,4 +1,4 @@
-package ru.jiehk.mobile.helpers;
+package ru.jiehk.mobile.config;
 
 import org.aeonbits.owner.Config;
 

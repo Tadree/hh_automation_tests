@@ -12,7 +12,8 @@ import static com.codeborne.selenide.Selenide.open;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MainPage {
-    private SelenideElement
+
+    private final SelenideElement
             searchBar = $("[data-qa=search-input]"),
             searchButton = $("[data-qa=search-button]"),
             advancedSearchButton = $("[data-qa=advanced-search]"),
@@ -28,17 +29,14 @@ public class MainPage {
     }
 
     @Step("Проверка отображения строки поиска")
-
-    public MainPage searchBarDisplayingCheck() {
+    public void searchBarDisplayingCheck() {
         searchBar.shouldBe(Condition.visible);
-        return this;
     }
 
     @Step("Проверка плейсхолдера строки поиска")
-    public MainPage searchBarPlaceHolderCheck(String expectedPlaceholder) {
+    public void searchBarPlaceHolderCheck(String expectedPlaceholder) {
         String actualPlaceholder = searchBar.getAttribute("placeholder");
         assertThat(actualPlaceholder).isEqualTo(expectedPlaceholder);
-        return this;
     }
 
     @Step("Вводим поисковой запрос в строку поиска")
@@ -48,43 +46,37 @@ public class MainPage {
     }
 
     @Step("Нажимаем на кнопку поиска")
-    public MainPage searchButtonClick() {
+    public void searchButtonClick() {
         searchButton.click();
-        return this;
     }
 
     @Step("Нажимаем на кнопку расширенного поиска")
-    public MainPage advancedSearchButtonClick() {
+    public void advancedSearchButtonClick() {
         advancedSearchButton.click();
-        return this;
     }
 
     @Step("Проверка появления релевантных поисковых подсказок")
-    public MainPage searchSuggestsCheck(String searchRequest) {
+    public void searchSuggestsCheck(String searchRequest) {
         searchSuggests.should(appear);
         searchSuggests.$("div").shouldHave(text(searchRequest));
-        return this;
     }
 
     @Step("Проверка появления popup подтверждения региона")
-    public MainPage regionPopupCheck() {
+    public void regionPopupCheck() {
         regionPopup.shouldBe(appear);
         regionPopup.shouldHave(text("Ваш регион"));
-        return this;
     }
 
     @Step("Проверка заголовка на главной странице")
-    public MainPage titleCheck(String expectedTitle) {
+    public void titleCheck(String expectedTitle) {
         title.shouldHave(text(expectedTitle));
-        return this;
     }
 
     @Step("Проверка отсутствия ошибок в консоле на главной странице")
-    public MainPage consoleErrorsCheck() {
+    public void consoleErrorsCheck() {
         String consoleLogs = Attach.getConsoleLogs();
         String errorText = "SEVERE";
         assertThat(consoleLogs).doesNotContain(errorText);
-        return this;
     }
 
     @Step("Переключаем язык")

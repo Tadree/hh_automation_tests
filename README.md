@@ -63,7 +63,7 @@ gradle clean ${TEST_SUITE}
 ```
 где: 
 
-- <code>TEST_SUITE</code> – ттесттовый набор (UI тесты, API тесты)
+- <code>TEST_SUITE</code> – тестовый набор (UI тесты, API тесты)
 - <code>BROWSER</code> – браузер, в котором будут выполняться тесты
 - <code>BROWSER_VERSION</code> – версия браузера, в которой будут выполняться тесты
 - <code>BROWSER_SIZE</code> – размер окна браузера, в котором будут выполняться тесты

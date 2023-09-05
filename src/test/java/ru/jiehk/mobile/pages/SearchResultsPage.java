@@ -9,9 +9,8 @@ import static com.codeborne.selenide.Selenide.$$;
 public class SearchResultsPage {
 
     @Step("Проверка наличиия результатов поиска")
-    public SearchResultsPage searchResultsCheck() {
+    public void searchResultsCheck() {
         $$(AppiumBy.id("ru.hh.android:id/cell_vacancy_card_container"))
                 .shouldHave(sizeGreaterThan(0));
-        return this;
     }
 }

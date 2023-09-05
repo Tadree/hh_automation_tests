@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 @Data
 public class EmployersSearchResponse {
+
     private int found, pages, page;
     @JsonProperty("per_page")
     private int perPage;

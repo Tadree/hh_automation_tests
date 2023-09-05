@@ -8,15 +8,14 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 public class SearchResultsPage {
-    private SelenideElement
+
+    private final SelenideElement
             vacanciesSearchHeader = $("[data-qa=vacancies-search-header]"),
             vacancyResults = $("[data-qa=vacancy-serp__results]");
 
-
     @Step("Проверка открытия страницы результатов поиска")
-    public SearchResultsPage openSearchResultsPageCheck(String searchRequest) {
+    public void openSearchResultsPageCheck(String searchRequest) {
         vacanciesSearchHeader.shouldHave(text(("«" + searchRequest + "»")));
         vacancyResults.shouldBe(visible);
-        return this;
     }
 }

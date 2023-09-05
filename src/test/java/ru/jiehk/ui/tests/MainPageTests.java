@@ -18,6 +18,7 @@ public class MainPageTests extends TestBase {
     public static final String TITLE = "Работа найдётся для каждого";
     public static final String TITLEEN = "There's a job for everyone";
     public static final String ADVANCEDSEARCHPAGETITLE = "Поиск вакансий";
+
     MainPage mainPage = new MainPage();
     AdvancedSearchPage advancedSearchPage = new AdvancedSearchPage();
     SearchResultsPage searchResultsPage = new SearchResultsPage();

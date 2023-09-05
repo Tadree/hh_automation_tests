@@ -8,6 +8,7 @@ import java.util.ArrayList;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class VacancySearchResponse {
+
     private ArrayList<VacancyData> items = new ArrayList<>();
 
     @Data

@@ -1,15 +1,17 @@
 package ru.jiehk.mobile.helpers;
 
 import org.aeonbits.owner.ConfigFactory;
+import ru.jiehk.mobile.config.BrowserstackConfig;
 
 import static io.restassured.RestAssured.given;
 import static java.lang.String.format;
 
 public class Browserstack {
+
     static BrowserstackConfig config = ConfigFactory.create(BrowserstackConfig.class, System.getProperties());
+
     public static String videoUrl(String sessionId) {
         String url = format("https://api.browserstack.com/app-automate/sessions/%s.json", sessionId);
-
         return given()
                 .auth().basic(config.getUser(), config.getKey())
                 .when()

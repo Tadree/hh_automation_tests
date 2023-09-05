@@ -11,13 +11,11 @@ import ru.jiehk.mobile.helpers.Attach;
 
 import static com.codeborne.selenide.Selenide.*;
 
-
 public class TestBase {
     @BeforeAll
     static void beforeAll() {
         Configuration.browser = BrowserstackDriver.class.getName();
         Configuration.browserSize = null;
-        Configuration.timeout = 30000;
     }
 
     @BeforeEach
@@ -29,12 +27,9 @@ public class TestBase {
     @AfterEach
     void afterEach() {
         String sessionId = sessionId().toString();
-
-//        Attach.screenshotAs("Last screenshot"); //todo
+        Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
-
-        closeWebDriver();
-
         Attach.addVideo(sessionId);
+        closeWebDriver();
     }
 }

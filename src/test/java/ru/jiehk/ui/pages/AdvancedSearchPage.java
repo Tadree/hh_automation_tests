@@ -9,7 +9,8 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class AdvancedSearchPage {
-    private SelenideElement
+
+    private final SelenideElement
             title = $("[data-qa=bloko-header-1]"),
             keywordsInput = $("[data-qa=vacancysearch__keywords-input]"),
             keywordsInputSuggest = $(".bloko-form-hint button"),
@@ -34,20 +35,17 @@ public class AdvancedSearchPage {
     }
 
     @Step("Нажимаем на кнопку поиска")
-    public AdvancedSearchPage searchButtonClick() {
+    public void searchButtonClick() {
         searchButton.click();
-        return this;
     }
 
     @Step("Проверка подстановки подсказки в поле \"Ключевые слова\"")
-    public AdvancedSearchPage keywordsInputSuggestCheck() {
+    public void keywordsInputSuggestCheck() {
         keywordsInput.shouldHave(value(keywordsInputSuggest.text()));
-        return this;
     }
 
     @Step("Проверка открытия страницы расширенного поиска")
-    public AdvancedSearchPage openAdvancedSearchPageCheck(String advancedSearchExpectedTitle) {
+    public void openAdvancedSearchPageCheck(String advancedSearchExpectedTitle) {
         title.shouldHave(text(advancedSearchExpectedTitle));
-        return this;
     }
 }
