@@ -53,6 +53,7 @@ gradle clean api_tests -Denv=local
 ```
 #### Удаленный запуск тестов:
 ##### Для UI тестов с параметрами из конфигурационного файла
+Предварительно требуется создать файл src/test/resources/config/remote.properties
 ```shell
 gradle clean ui_tests -Denv=remote
 ```
