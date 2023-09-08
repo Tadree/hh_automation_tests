@@ -31,7 +31,7 @@ public class BrowserstackDriver implements WebDriverProvider {
         mutableCapabilities.setCapability("name", config.getName());
         try {
             return new RemoteWebDriver(
-                    new URL(config.getBaseUrl()), mutableCapabilities);
+                    new URL(config.getBbrowserstackBaseUrl()), mutableCapabilities);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }

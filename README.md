@@ -63,7 +63,7 @@ gradle clean ui_tests
 -Dbrowser=${BROWSER}
 -DbrowserVersion=${BROWSER_VERSION}
 -DbrowserSize=${BROWSER_SIZE}
--DremoteDriverUrl=https://{REMOTE_DRIVER_LOGIN}:{REMOTE_DRIVER_PASSWORD}@${REMOTE_DRIVER_URL}/wd/hub/
+-DremoteDriverUrl=https://${REMOTE_DRIVER_LOGIN}:${REMOTE_DRIVER_PASSWORD}@${REMOTE_DRIVER_URL}/wd/hub/
 -DvideoStorage=https://${VIDEO_STORAGE_URL}/video/
 ```
 где:
