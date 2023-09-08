@@ -1,5 +1,7 @@
 package ru.jiehk.mobile.tests;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -8,6 +10,8 @@ import ru.jiehk.mobile.pages.MainPage;
 
 @Owner("Elena Kosiakova")
 @Tag("android")
+@Epic("Android tests")
+@Feature("Main screen")
 public class MainPageTests extends TestBase {
 
     public static final String TITLE = "Вакансии для вас";
@@ -25,7 +29,7 @@ public class MainPageTests extends TestBase {
 
     @Test
     @DisplayName("Проверка отображения релевантных поисковых подсказок")
-    void suggestsTest() {
+    void displayingRelevantSuggestsTest() {
         mainPage
                 .closeAuthorizationScreen()
                 .searchBarSetValue(SEARCHREQUEST)

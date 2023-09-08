@@ -1,5 +1,7 @@
 package ru.jiehk.api.tests;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -13,10 +15,12 @@ import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static ru.jiehk.api.specs.RequestSpec.requestSpec;
-import static ru.jiehk.api.specs.ResponseSpec.forbiddenErrorResponseSpec;
+import static ru.jiehk.api.specs.ResponseSpec.responseSpecCode403;
 
 @Tag("api")
 @Owner("Elena Kosiakova")
+@Epic("API tests")
+@Feature("Phone confirm request")
 public class PhoneConfirmTests extends TestBase {
 
     @Test
@@ -33,7 +37,7 @@ public class PhoneConfirmTests extends TestBase {
                         .when()
                         .post("/resume_phone_confirm")
                         .then()
-                        .spec(forbiddenErrorResponseSpec)
+                        .spec(responseSpecCode403)
                         .extract().as(PhoneConfirmErrorResponse.class));
 
         step("Проверка ответа", () -> {

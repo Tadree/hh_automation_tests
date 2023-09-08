@@ -1,5 +1,7 @@
 package ru.jiehk.api.tests;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -15,11 +17,13 @@ import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static ru.jiehk.api.specs.ResponseSpec.badRequestErrorResponseSpec;
-import static ru.jiehk.api.specs.ResponseSpec.successResponseSpec;
+import static ru.jiehk.api.specs.ResponseSpec.responseSpecCode400;
+import static ru.jiehk.api.specs.ResponseSpec.responseSpecCode200;
 
 @Owner("Elena Kosiakova")
 @Tag("api")
+@Epic("API tests")
+@Feature("Suggests request")
 public class VacancySearchSuggestsTests extends TestBase {
 
     @ParameterizedTest(name = "Проверка получения поисковых подсказок на запрос {0}")
@@ -33,7 +37,7 @@ public class VacancySearchSuggestsTests extends TestBase {
                         .when()
                         .get("/suggests/vacancy_search_keyword")
                         .then()
-                        .spec(successResponseSpec)
+                        .spec(responseSpecCode200)
                         .extract().as(VacancySearchSuggestsSuccessResponse.class));
 
         step("Проверка ответа", () ->
@@ -49,7 +53,7 @@ public class VacancySearchSuggestsTests extends TestBase {
                         .when()
                         .get("/suggests/vacancy_search_keyword")
                         .then()
-                        .spec(badRequestErrorResponseSpec)
+                        .spec(responseSpecCode400)
                         .extract().as(VacancySearchSuggestsErrorResponse.class));
 
         step("Проверка ответа", () -> {

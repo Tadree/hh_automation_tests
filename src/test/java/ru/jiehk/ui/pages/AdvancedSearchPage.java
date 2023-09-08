@@ -18,7 +18,7 @@ public class AdvancedSearchPage {
 
     @Step("Открываем страницу расширенного поиска")
     public AdvancedSearchPage openAdvancedSearchPage() {
-        open("https://hh.ru/search/vacancy/advanced");
+        open("/search/vacancy/advanced");
         return this;
     }
 

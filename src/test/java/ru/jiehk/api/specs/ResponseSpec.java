@@ -9,21 +9,22 @@ import static org.hamcrest.Matchers.notNullValue;
 
 public class ResponseSpec {
 
-    public static ResponseSpecification successResponseSpec = new ResponseSpecBuilder()
+    public static ResponseSpecification responseSpecCode200 = new ResponseSpecBuilder()
             .log(STATUS)
             .log(BODY)
             .expectStatusCode(200)
             .expectBody(notNullValue())
             .build();
 
-    public static ResponseSpecification badRequestErrorResponseSpec = new ResponseSpecBuilder()
+    public static ResponseSpecification responseSpecCode400 = new ResponseSpecBuilder()
             .log(STATUS)
             .log(BODY)
             .expectStatusCode(400)
             .expectBody(notNullValue())
             .build();
 
-    public static ResponseSpecification forbiddenErrorResponseSpec = new ResponseSpecBuilder()
+    public static ResponseSpecification responseSpecCode403
+            = new ResponseSpecBuilder()
             .log(STATUS)
             .log(BODY)
             .expectStatusCode(403)

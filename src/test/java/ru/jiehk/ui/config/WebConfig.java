@@ -2,10 +2,10 @@ package ru.jiehk.ui.config;
 
 import org.aeonbits.owner.Config;
 
-@TestsConfig.Sources({
+@WebConfig.Sources({
         "classpath:config/${env}.properties"
 })
-public interface TestsConfig extends Config {
+public interface WebConfig extends Config {
 
     @Key("browser")
     @DefaultValue("chrome")
@@ -25,4 +25,8 @@ public interface TestsConfig extends Config {
 
     @Key("remoteDriverUrl")
     String getRemoteDriverUrl();
+
+    @Key("isRemote")
+    @DefaultValue("false")
+    Boolean getIsRemote();
 }

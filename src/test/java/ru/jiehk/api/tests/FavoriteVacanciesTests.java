@@ -1,5 +1,7 @@
 package ru.jiehk.api.tests;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -17,12 +19,13 @@ import static ru.jiehk.api.specs.ResponseSpec.*;
 
 @Tag("api")
 @Owner("Elena Kosiakova")
+@Epic("API tests")
+@Feature("Add to favorite request")
 public class FavoriteVacanciesTests extends TestBase {
 
     @Test
     @DisplayName("Проверка ошибки авторизации при добавлении вакансии в избранное")
     void AddVacancyToFavoriteWithoutAuthorizationTest() {
-        TestData testData = new TestData();
         VacancySearchResponse vacancySearchResponse = step("Выполнение запроса на поиск вакансий", () ->
                 given()
                         .spec(requestSpec)
@@ -30,7 +33,7 @@ public class FavoriteVacanciesTests extends TestBase {
                         .when()
                         .get("/vacancies")
                         .then()
-                        .spec(successResponseSpec)
+                        .spec(responseSpecCode200)
                         .extract().as(VacancySearchResponse.class));
 
         PhoneConfirmErrorResponse phoneConfirmResponse = step("Выполнение запроса на добавление найденной вакансии в избранное", () ->
@@ -39,7 +42,7 @@ public class FavoriteVacanciesTests extends TestBase {
                         .when()
                         .put("/vacancies/favorited/" + vacancySearchResponse.getItems().get(0).getId())
                         .then()
-                        .spec(forbiddenErrorResponseSpec)
+                        .spec(responseSpecCode403)
                         .extract().as(PhoneConfirmErrorResponse.class));
 
         step("Проверка ответа", () -> {

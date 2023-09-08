@@ -1,5 +1,7 @@
 package ru.jiehk.ui.tests;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
@@ -11,6 +13,8 @@ import ru.jiehk.ui.pages.SearchResultsPage;
 
 @Owner("Elena Kosiakova")
 @Tag("ui")
+@Epic("UI tests")
+@Feature("Main page")
 public class MainPageTests extends TestBase {
 
     public static final String SEARCHPLACEHOLDER = "Профессия, должность или компания";
@@ -25,7 +29,7 @@ public class MainPageTests extends TestBase {
 
     @Test
     @DisplayName("Отображение строки поиска на главной странице")
-    void searchBarTest() {
+    void searchBarDisplayingTest() {
         mainPage
                 .openMainPage()
                 .searchBarDisplayingCheck();
@@ -33,7 +37,7 @@ public class MainPageTests extends TestBase {
 
     @Test
     @DisplayName("Проверка плейсхолдера строки поиска на главной странице")
-    void searchBarPlaceholderTest() {
+    void searchBarPlaceholderTextTest() {
         mainPage
                 .openMainPage()
                 .searchBarPlaceHolderCheck(SEARCHPLACEHOLDER);
@@ -41,7 +45,7 @@ public class MainPageTests extends TestBase {
 
     @Test
     @DisplayName("Переход на страницу результатов поиска при выполнении поиска с главной страницы")
-    void searchTest() {
+    void redirectToSearchResultsPageTest() {
         mainPage
                 .openMainPage()
                 .searchBarSetValue(SEARCHREQUEST)
@@ -52,7 +56,7 @@ public class MainPageTests extends TestBase {
 
     @Test
     @DisplayName("Переход на страницу расширенного поиска с главной страницы")
-    void advancedSearchTest() {
+    void redirectToAdvancedSearchTest() {
         mainPage
                 .openMainPage()
                 .advancedSearchButtonClick();
@@ -62,7 +66,7 @@ public class MainPageTests extends TestBase {
 
     @Test
     @DisplayName("Отображение поисковых подсказок на главной странице")
-    void suggestsTest() {
+    void displayingRelevantSuggestsTest() {
         mainPage
                 .openMainPage()
                 .searchBarSetValue(SEARCHREQUEST)
@@ -71,7 +75,7 @@ public class MainPageTests extends TestBase {
 
     @Test
     @DisplayName("Проверка заголовка на главной странице")
-    void titleTest() {
+    void titleTextTest() {
         mainPage
                 .openMainPage()
                 .titleCheck(TITLE);
@@ -79,7 +83,7 @@ public class MainPageTests extends TestBase {
 
     @Test
     @DisplayName("Отображение popup подтверждения региона на главной странице")
-    void regionPopupTest() {
+    void displayingRegionPopupTest() {
         mainPage
                 .openMainPage()
                 .regionPopupCheck();

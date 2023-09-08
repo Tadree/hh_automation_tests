@@ -6,7 +6,7 @@ import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import ru.jiehk.mobile.config.BrowserstackConfig;
+import ru.jiehk.mobile.config.MobileConfig;
 
 import javax.annotation.Nonnull;
 import java.net.MalformedURLException;
@@ -14,7 +14,7 @@ import java.net.URL;
 
 public class BrowserstackDriver implements WebDriverProvider {
 
-    static BrowserstackConfig config = ConfigFactory.create(BrowserstackConfig.class, System.getProperties());
+    static MobileConfig config = ConfigFactory.create(MobileConfig.class, System.getProperties());
 
     @Nonnull
     @Override
@@ -31,7 +31,7 @@ public class BrowserstackDriver implements WebDriverProvider {
         mutableCapabilities.setCapability("name", config.getName());
         try {
             return new RemoteWebDriver(
-                    new URL(config.getBrowserstackBaseUrl()), mutableCapabilities);
+                    new URL(config.getBaseUrl()), mutableCapabilities);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }

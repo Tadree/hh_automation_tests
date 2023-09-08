@@ -1,5 +1,7 @@
 package ru.jiehk.api.tests;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -13,10 +15,12 @@ import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static ru.jiehk.api.specs.ResponseSpec.successResponseSpec;
+import static ru.jiehk.api.specs.ResponseSpec.responseSpecCode200;
 
 @Owner("Elena Kosiakova")
 @Tag("api")
+@Epic("API tests")
+@Feature("Employers search request")
 public class EmployersSearchTests extends TestBase {
 
     @ParameterizedTest(name = "Поиск работодателя с наименование {0}")
@@ -30,7 +34,7 @@ public class EmployersSearchTests extends TestBase {
                         .when()
                         .get("/employers")
                         .then()
-                        .spec(successResponseSpec)
+                        .spec(responseSpecCode200)
                         .extract().as(EmployersSearchResponse.class));
 
         step("Проверка ответа", () ->
@@ -47,7 +51,7 @@ public class EmployersSearchTests extends TestBase {
                         .when()
                         .get("/employers")
                         .then()
-                        .spec(successResponseSpec)
+                        .spec(responseSpecCode200)
                         .extract().as(EmployersSearchResponse.class));
 
         step("Проверка ответа", () ->

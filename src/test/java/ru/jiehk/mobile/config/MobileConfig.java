@@ -2,10 +2,12 @@ package ru.jiehk.mobile.config;
 
 import org.aeonbits.owner.Config;
 
+@Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
-        "classpath:config/mobile.properties"
+        "classpath:config/browserstack.properties",
+        "classpath:config/android.properties"
 })
-public interface BrowserstackConfig extends Config {
+public interface MobileConfig extends Config {
 
     @Key("user")
     @DefaultValue("bsuser_JSwAUo")
@@ -15,9 +17,9 @@ public interface BrowserstackConfig extends Config {
     @DefaultValue("PgfYVaTjLqqsfixeYaFJ")
     String getKey();
 
-    @Key("browserstackBaseUrl")
+    @Key("baseUrl")
     @DefaultValue("https://hub.browserstack.com/wd/hub")
-    String getBrowserstackBaseUrl();
+    String getBaseUrl();
 
     @Key("app")
     @DefaultValue("bs://36729c2e803d2c77f2569ea4bd5259dddd49e24e")
