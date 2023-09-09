@@ -9,6 +9,8 @@ import org.junit.jupiter.api.Test;
 import ru.jiehk.mobile.pages.MainPage;
 import ru.jiehk.mobile.pages.SearchResultsPage;
 
+import static com.codeborne.selenide.Selenide.open;
+
 @Owner("Elena Kosiakova")
 @Tag("android")
 @Epic("Android tests")
@@ -23,6 +25,7 @@ public class SearchTest extends TestBase {
     @Test
     @DisplayName("Проверка отображения результатов поиска")
     void displayingSearchResultsTest() {
+        open();
         mainPage
                 .closeAuthorizationScreen()
                 .searchBarSetValue(SEARCHREQUEST + "\\n");
