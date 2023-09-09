@@ -53,14 +53,24 @@ gradle clean api_tests -Denv=local
 ```
 #### Удаленный запуск тестов:
 ##### Для UI тестов с параметрами из конфигурационного файла
-Предварительно требуется создать файл src/test/resources/config/remote.properties
-```shell
+```bash
 gradle clean ui_tests -Denv=remote
+```
+Предварительно требуется создать файл src/test/resources/config/remote.properties
+Пример заполнения файла:
+```bash
+browser=chrome
+browserVersion=100.0
+browserSize=1920x1080
+remoteDriverUrl=http://example.com
+baseUrl=http://example.com
+isRemote=true
 ```
 
 ##### Для UI тестов с передачей параметров:
 ```bash
 gradle clean ui_tests
+-Denv=remote
 -Dbrowser=${BROWSER}
 -DbrowserVersion=${BROWSER_VERSION}
 -DbrowserSize=${BROWSER_SIZE}

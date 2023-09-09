@@ -14,10 +14,10 @@ import ru.jiehk.mobile.pages.MainPage;
 @Feature("Main screen")
 public class MainPageTests extends TestBase {
 
-    public static final String TITLE = "Вакансии для вас";
-    public static final String SEARCHREQUEST = "qa";
+    private static final String TITLE = "Вакансии для вас";
+    private static final String SEARCHREQUEST = "qa";
 
-    MainPage mainPage = new MainPage();
+    private final MainPage mainPage = new MainPage();
 
     @Test
     @DisplayName("Проверка заголовка главного экрана")

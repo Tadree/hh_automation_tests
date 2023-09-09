@@ -17,15 +17,15 @@ import ru.jiehk.ui.pages.SearchResultsPage;
 @Feature("Main page")
 public class MainPageTests extends TestBase {
 
-    public static final String SEARCHPLACEHOLDER = "Профессия, должность или компания";
-    public static final String SEARCHREQUEST = "qa";
-    public static final String TITLE = "Работа найдётся для каждого";
-    public static final String TITLEEN = "There's a job for everyone";
-    public static final String ADVANCEDSEARCHPAGETITLE = "Поиск вакансий";
+    private static final String SEARCHPLACEHOLDER = "Профессия, должность или компания";
+    private static final String SEARCHREQUEST = "qa";
+    private static final String TITLE = "Работа найдётся для каждого";
+    private static final String TITLEEN = "There's a job for everyone";
+    private static final String ADVANCEDSEARCHPAGETITLE = "Поиск вакансий";
 
-    MainPage mainPage = new MainPage();
-    AdvancedSearchPage advancedSearchPage = new AdvancedSearchPage();
-    SearchResultsPage searchResultsPage = new SearchResultsPage();
+    private final MainPage mainPage = new MainPage();
+    private final AdvancedSearchPage advancedSearchPage = new AdvancedSearchPage();
+    private final SearchResultsPage searchResultsPage = new SearchResultsPage();
 
     @Test
     @DisplayName("Отображение строки поиска на главной странице")
@@ -91,7 +91,7 @@ public class MainPageTests extends TestBase {
 
     @Test
     @DisplayName("Проверка смены языка на английский")
-    public void languageSwitcherTest() {
+    void languageSwitcherTest() {
         mainPage
                 .openMainPage()
                 .changeLocale()

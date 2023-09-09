@@ -24,7 +24,7 @@ public class MainPage {
 
     @Step("Открываем главную страницу")
     public MainPage openMainPage() {
-        open("https://hh.ru");
+        open("");
         return this;
     }
 

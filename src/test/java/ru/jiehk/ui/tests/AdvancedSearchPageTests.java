@@ -15,10 +15,10 @@ import ru.jiehk.ui.pages.SearchResultsPage;
 @Feature("Advanced search page")
 public class AdvancedSearchPageTests extends TestBase {
 
-    public static final String KEYWORDS = "специалист по тестированию";
+    private static final String KEYWORDS = "специалист по тестированию";
 
-    AdvancedSearchPage advancedSearchPage = new AdvancedSearchPage();
-    SearchResultsPage searchResultsPage = new SearchResultsPage();
+    private final AdvancedSearchPage advancedSearchPage = new AdvancedSearchPage();
+    private final SearchResultsPage searchResultsPage = new SearchResultsPage();
 
     @Test
     @DisplayName("Подстановка подсказки в поле \"Ключевые слова\" на странице расширенного поиска")
