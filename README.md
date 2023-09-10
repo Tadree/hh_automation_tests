@@ -106,7 +106,7 @@ gradle clean android_tests -Denv=local
       в <code>TEST_SUITE</code> выбрать test 
 5. Нажать кнопку **Собрать**.
 
-### <img alt="Allure" height="20" src="images/logos/Allure_Report.svg" width="20" align="center"> <a href="https://jenkins.autotests.cloud/job/20-Tadree-hh.ru/45/allure/">Отчет</a> в Allure report
+### <img alt="Allure" height="20" src="images/logos/Allure_Report.svg" width="20" align="center"> <a href="https://jenkins.autotests.cloud/job/20-Tadree-hh.ru/allure/">Отчет</a> в Allure report
 #### Основная страница отчета
 <p align="center">
 <img title="Allure report" src="images/screens/Allure-report.png">
